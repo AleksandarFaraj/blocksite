@@ -1,0 +1,10 @@
+<script>
+function myFunction() {
+    var x = document.createElement("input");
+    var y = document.createElement("br");
+    x.setAttribute("type", "text");
+    document.body.appendChild(y);
+    document.body.appendChild(x);
+    
+}
+</script> 

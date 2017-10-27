@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+
+  "name": "Blocksite extension",
+  "description": "Keeps your time",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    },
+  "default_title": "My title goes here",
+  "default_popup": "popup.html"
+  },
+
+  "options_ui": {
+      "page": "options.html",
+      "chrome_style": true
+  },
+
+  "background": {
+    "scripts":["background.js"],
+    "persistent": false
+  },
+
+//  "content_scripts": [
+//    {
+//      "matches": ["http://www."],
+//      "css": ["mystyle.css"],
+//      "js": ["myjs.js"]
+//    }
+//  ],
+
+  
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ]
+}
