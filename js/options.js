@@ -1,11 +1,10 @@
 // Saves options to chrome.storage
 
 function save_options() {
-    alert("hello");
     var elements = document.getElementsByTagName("input");
     var stopList = [];
     for(var i = 0; i < elements.length; i++) {
-        if(elements[i].type == 'text') {
+        if((elements[i].type == 'text')&&(elements[i].value.length > 3) ) {
             stopList.push(elements[i].value);
             alert(elements[i]);
         }

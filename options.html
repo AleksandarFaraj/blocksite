@@ -7,23 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Kube CSS -->
-    <link rel="stylesheet" href="dist/css/kube.css">
+    <link rel="stylesheet" href="css/kube.css">
 
 </head>
 <body>
     <p>Your "stopList" goes bellow. Enter URLs of blocked sites there.</p>
 
-<input type = text id = first>
-<input type = text id = second>
-<input type = text id = third>
-<input type = text id = fourth>
-<input type = text id = fifth>
-</div>
 
-
+<input type = text id = first pattern = "[A-Za-z0-9.\-:_\/]{4,30}">
+<input type = text id = second pattern = "[A-Za-z0-9.\-:_\/]{4,30}" title = "error">
+<input type = text id = third pattern = "[A-Za-z0-9.\-:_\/]{4,30}">
+<input type = text id = fourth pattern = "[A-Za-z0-9.\-:_\/]{4,30}">
+<input type = text id = fifth pattern = "[A-Za-z0-9.\-:_\/]{4,30}">
 
 <div id="status"></div>
 <button id="save">Save</button>
+
 
 <script src="js/options.js"></script>
 
