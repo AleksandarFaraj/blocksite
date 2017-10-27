@@ -37,8 +37,8 @@ function restore_options() {
     document.getElementById('third').value = items.stop3;
     document.getElementById('fourth').value = items.stop4;
     document.getElementById('fifth').value = items.stop5;
-    document.getElementById('sixth').value = items.stop4;
-    document.getElementById('seventh').value = items.stop5;
+    document.getElementById('sixth').value = items.stop6;
+    document.getElementById('seventh').value = items.stop7;
   });
 }
 
