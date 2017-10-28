@@ -11,14 +11,14 @@ You can check your regex on the site https://regex101.com/
 You can also use spaces and newlines, they will be ignored by extension.  
 
 ### Examples
-(fb\.com)|(pornhub)|(xvideos)
+(fb\\.com)|(pornhub)|(xvideos)
 
 You can also write like this:
-(fb\.com) | (pornhub) | (xvideos)
+(fb\\.com) | (pornhub) | (xvideos)
 
 or like this:
-(fb\.com) |
-(pornhub) |
+(fb\\.com) |  
+(pornhub) |  
 (xvideos) 
 
 Dot should be backslashed. Without backslashing dot match any character.
