@@ -5,7 +5,7 @@ Just set hostname(s) in extension's preferences and it will close any active tab
 Use at least 4 characters for one hostname to prevent closing tabs with random sites.
 
 Examples:
-fb.com
+fb.com  
 youtube
 
 ### Why should I use it?
