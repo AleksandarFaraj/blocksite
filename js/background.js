@@ -6,7 +6,7 @@
 function matchAndClose(pattern, url, tabId) {
         if((pattern.length > 3)&&(/ /.test(pattern)) == false) {
             
-            var re = new RegExp(pattern, 'gi');
+            var re = new RegExp(pattern, 'gix');
             if( re.test(url) ) {
                 chrome.tabs.remove(tabId);
 //                alert(url + " was blocked");
