@@ -32,15 +32,15 @@ Here the list of such characters:  . ? + * | ( ) [ ] { } ^ $ / \
 
 #### Quatifiers { } ? + * 
 If you want to set up, how many times should appear some character(or group), then you use quatifier after it.
-Example: _(hey){1,3}_ means "hey" from 1 time to 3 times(matches hey and heyhey and heyheyhey)
-Example: _(hey)?_ means "hey" zero or one time(it matches empty string and hey)
-Example: _(hey)+_ means "hey" at least one time(it matches hey and heyhey and any time of hey)
-Example: _(hey)*_ means "hey" any time, even zero time(it matches any string)
+Example: _(hey){1,3}_ means "hey" from 1 time to 3 times(matches hey and heyhey and heyheyhey)  
+Example: _(hey)?_ means "hey" zero or one time(it matches empty string and hey)  
+Example: _(hey)+_ means "hey" at least one time(it matches hey and heyhey and any time of hey)  
+Example: _(hey)*_ means "hey" any time, even zero time(it matches any string)  
 The last example can be a little confusing. The string "Good day" contains "hey" zero time, so it matches _(hey)*_
 
 #### Character class [ ]
 Character class is just set of characters. It is writed inside square braces. You can set up the range of characters, using dash sign.
-Example: _[a-zA-Z0-9]_ matches one character from a-z or A-Z or 0-9.
+Example: _[a-zA-Z0-9]_ matches one character from a-z or A-Z or 0-9.  
 If you want more than one character from set, just use quantifier _[a-zA-Z0-9]{2,10}_
 
 #### Slash and backslash
