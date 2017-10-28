@@ -16,7 +16,7 @@ You can also use spaces and newlines, they will be ignored by extension.
 You can also write like this:
 (fb\\.com) | (pornhub) | (xvideos)
 
-or like this:
+or like this:  
 (fb\\.com) |  
 (pornhub) |  
 (xvideos) 
@@ -26,3 +26,5 @@ Dot should be backslashed. Without backslashing dot match any character.
 ### Why should I use it?
 It can be useful, if you spend too much time at social network(fb, youtube, etc). It will help you save your time. 
 
+### TO DO
+* short introduction to regular expression
