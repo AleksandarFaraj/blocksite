@@ -3,6 +3,10 @@
 //    return stopItem.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
 //}
 
+function removeWhiteSpace(pattern) {
+    return pattern.replace(/\s/g, '');
+}    
+
 function matchAndClose(pattern, url, tabId) {
         if((pattern.length > 3)&&(/ /.test(pattern)) == false) {
             
@@ -21,7 +25,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
         chrome.storage.sync.get(null, function(items) {
             changeInfo.url = changeInfo.url.match(/(http(s)?:\/\/)?.+?\//);
 //            alert(changeInfo.url[0]);
-            matchAndClose(items.pattern, changeInfo.url[0], tabId);
+            matchAndClose(removeWhiteSpace(items.pattern), changeInfo.url[0], tabId);
        });
     }
 });
