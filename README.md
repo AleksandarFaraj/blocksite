@@ -8,7 +8,7 @@ fb.com
 youtube
 
 ### Why should I use it?
-It can be useful, if you spend too much time at social network(fb, youtube, etc). There are other extensions that do the same thing, but they don't work so "silent". They show you a popup page and inform how much times you've tried to enter "blocked" site. This extension doesn't do such things, it just silent close a tab and save your time. 
+It can be useful, if you spend too much time at social network(fb, youtube, etc). There are other extensions that do the same thing, but they don't work so "silent". They show you a popup page and inform how much times you've tried to enter "blocked" site. This extension doesn't do such things, it just silent closes a tab and save your time. 
 
 ### To Do
 *Dealing with many text-inputs is confusing. I want to replace all text-inputs in options page with one text-input. It will simplify the code. When it will be done, you can use construction like this:  

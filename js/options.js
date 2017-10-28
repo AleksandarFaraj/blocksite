@@ -6,7 +6,6 @@ function save_options() {
     for(var i = 0; i < elements.length; i++) {
         if(elements[i].type == 'text') {
             stopList.push(elements[i].value);
-            alert(elements[i]);
         }
     }
     

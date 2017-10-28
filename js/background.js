@@ -9,7 +9,7 @@ function matchAndClose(stopItem, url, tabId) {
             var re = new RegExp(stopItem, 'i');
             if( re.test(url) ) {
                 chrome.tabs.remove(tabId);
-                alert(url + " was blocked");
+//                alert(url + " was blocked");
             }
         }
 }
