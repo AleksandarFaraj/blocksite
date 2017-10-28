@@ -1,12 +1,12 @@
 
-function regExpEscape(stopItem) {
-    return stopItem.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
-}
+//function regExpEscape(stopItem) {
+//    return stopItem.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
+//}
 
-function matchAndClose(stopItem, url, tabId) {
-        if((stopItem.length > 3)&&(/ /.test(stopItem)) == false) {
+function matchAndClose(pattern, url, tabId) {
+        if((pattern.length > 3)&&(/ /.test(pattern)) == false) {
             
-            var re = new RegExp(stopItem, 'i');
+            var re = new RegExp(pattern, 'gi');
             if( re.test(url) ) {
                 chrome.tabs.remove(tabId);
 //                alert(url + " was blocked");
@@ -21,13 +21,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
         chrome.storage.sync.get(null, function(items) {
             changeInfo.url = changeInfo.url.match(/(http(s)?:\/\/)?.+?\//);
 //            alert(changeInfo.url[0]);
-            matchAndClose(regExpEscape(items.stop1), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop2), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop3), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop4), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop5), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop6), changeInfo.url[0], tabId);
-            matchAndClose(regExpEscape(items.stop7), changeInfo.url[0], tabId);
+            matchAndClose(items.pattern, changeInfo.url[0], tabId);
        });
     }
 });
