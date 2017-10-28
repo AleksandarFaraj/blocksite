@@ -1,8 +1,9 @@
 # blocksite
 ## Chrome extension that closes tab with certain url.
 ### How to use
-Just set hostname(s) in extension's preferences and it will close any active tab, containing that hostname.
-Use at least 4 characters for one hostname to prevent closing tabs with random sites.
+Just set hostname(s) in extension's preferences and it will close any active tab,  
+containing that hostname. Use at least 4 characters for one hostname to prevent  
+closing tabs with random sites.
 
 Examples:  
 fb.com  
