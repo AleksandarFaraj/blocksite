@@ -16,8 +16,8 @@ function matchAndClose(stopItem, url, tabId) {
 
 
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
+
     if(typeof(changeInfo.url) !== 'undefined') {
-        
         chrome.storage.sync.get(null, function(items) {
             changeInfo.url = changeInfo.url.match(/(http(s)?:\/\/)?.+?\//);
 //            alert(changeInfo.url[0]);
