@@ -22,9 +22,10 @@ or like this:
 (xvideos) 
 
 Dot should be backslashed. Without backslashing dot match any character.
+Just do like in examples above, it's simple.
 
 ### Why should I use it?
-It can be useful, if you spend too much time at social network(fb, youtube, etc). It will help you save your time. 
+It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send you any notification/question before or after closing page. It just silent closes page and don't disturb you. It created for saving you time, not for wasting it.
 
 ### TO DO
 * short introduction to regular expression
