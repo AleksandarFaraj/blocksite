@@ -24,15 +24,6 @@
     "scripts":["js/background.js"],
     "persistent": false
   },
-
-//  "content_scripts": [
-//    {
-//      "matches": ["http://www."],
-//      "css": ["mystyle.css"],
-//      "js": ["myjs.js"]
-//    }
-//  ],
-
   
   "permissions": [
     "tabs",
