@@ -43,14 +43,3 @@ Character class is just set of characters. They are placed inside square braces.
 3. __[a-zA-Z0-9]+__ means __at least one latin character or number__. It matches hektr911
 4. __[a-zA-Z0-9\-]+__ means __at least one latin character or number or dash sign__. It matches hektr-911
 Yes, dash is a special sign, but only when it stays inside square bracets.
-
-### Slash and backslash
-You can also use http:// or https:// in your regex, but it's not recommended.  
-/ is a special sign and has to be backslashed, like this __http(s)?:\\ / \\ /__   
-As you can see, it looks confusing.
-So, instead of __http(s)?:\\ / \\ /fb\\.com\ /__ use just __fb\\.com__   
-
-
-It also has one advantage. The latter one will match any url with hostname, containig fb.com(for example m.fb.com).  
-But the first one matches only fb.com(because you've restricted conditions and nothing can appear between https:// and fb.com) 
-So, don't use protocol names, only hostnames.
