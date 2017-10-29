@@ -17,7 +17,7 @@ This is true also for any other characher with special meaning.
 
 __If you don't need special meaning of character, you have to backslash it__.
 
-Here is __the list of characters with special meaning: . ? + * | ( ) [ ] { } ^ $ / \ __ 
+Here is the list of characters with special meaning: . ? + * | ( ) [ ] { } ^ $ / \  
 
 ### Dot
 **Dot-sign** means "any character except of new line". So, it matches almost any character. If you want dot match only dot, you have to backslash it. Example: __fb\.com__
