@@ -19,11 +19,11 @@ Here is the list of such characters:  . ? + * | ( ) [ ] { } ^ $ / \
 
 #### Quatifiers { } ? + * 
 If you want to set up, how many times should appear some character(or group), then you should use quatifier after it.
-- {min,max}  
+1. **x{min,max}** means x appears from min times to max times 
 Example: _(hey){1,3}_ means "hey" from 1 time to 3 times(matches hey and heyhey and heyheyhey)  
-- x**?** means x **zero or one time**. 
+- **x?** means x **zero or one time**. 
 Example: _(hey)?_  matches strings that don't contain hey and strings that contain it one time  
-- x+ means x at least one time
+- **x+** means x at least one time
 Example: _(hey)+_ matches hey and heyhey and any time of hey  
 - x* means x zero or ore times
 Example: _(hey)*_ it matches any string  
@@ -33,6 +33,9 @@ The same thing with _(hey)?_
 
 #### Character class [ ]
 Character class is just set of characters. It is writed inside square braces. You can set up the range of characters, using dash sign.
+- [a-z]{2} means two lowercase latin characters.
+- [a-zA-Z]{2,7} means from two to seven latin characters. Case does not matter.
+- [a-zA-Z0-9]
 Example: _[a-zA-Z0-9]_ matches one character from a-z or A-Z or 0-9.  
 If you want more than one character from set, just use quantifier _[a-zA-Z0-9]{2,10}_
 Yes, dash is special sign, but only when it stays inside square bracets.
