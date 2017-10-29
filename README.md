@@ -23,10 +23,16 @@ or like this:
 (xvideos) 
 
 ### Description
-As you saw, dot is backslashed. Without backslashing dot match any character. This is how works regular expressions.
+As you saw, dot is backslashed. Without backslashing dot matches any character. This is how works regular expressions.  
+
+
 Vertical line is alternation sign, it divides one hostname from another.  
+
+
 Each hostname should be placed inside brackets. Brackets are used for grouping letters. 
-It allows you use alternations for whole words not for just two letters. 
+It allows you use alternations for whole words not for just two letters.  
+
+
 That's all what you really need to know about regular expressions to use this extension.
 Just do like in example above, it's simple. 
 
