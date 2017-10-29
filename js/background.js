@@ -10,7 +10,7 @@ function removeWhiteSpace(pattern) {
 function matchAndClose(pattern, url, tabId) {
         if((pattern.length > 4)&&(/ /.test(pattern)) == false) {
             
-            var re = new RegExp(pattern, 'gi');
+            var re = new RegExp(pattern, 'i');
             if( re.test(url) ) {
                 chrome.tabs.remove(tabId);
 //                alert(url + " was blocked");

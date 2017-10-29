@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Blocksite extension",
-  "description": "Keeps your time",
-  "version": "1.0",
+  "name": "Blocksite",
+  "description": "Block sites using regular expression",
+  "version": "0.1",
 
 //  "browser_action": {
 //    "default_icon": {
