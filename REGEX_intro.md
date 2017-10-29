@@ -19,14 +19,14 @@ Here is the list of such characters:  . ? + * | ( ) [ ] { } ^ $ / \
 
 #### Quatifiers { } ? + * 
 If you want to set up, how many times should appear some character(or group), then you should use quatifier after it.
-1. **x{min,max}** means x appears from min times to max times 
-Example: _(hey){1,3}_ means "hey" from 1 time to 3 times(matches hey and heyhey and heyheyhey)  
-2. **x?** means x **zero or one time**. 
-Example: _(hey)?_  matches strings that don't contain hey and strings that contain it one time  
-3. **x+** means x at least one time
-Example: _(hey)+_ matches hey and heyhey and any time of hey  
-4. __x*__ means x zero or ore times
-Example: _(hey)*_ it matches any string  
+1. __x{min,max}__ means __x from min times to max times__  
+Example: _(hey){1,3}_ means "hey" from 1 time to 3 times(matches hey and heyhey and heyheyhey)
+2. __x?__ means __x zero or one time__  
+Example: _(hey)?_  matches strings that don't contain hey and strings that contain it one time
+3. __x+__ means __x at least one time__  
+Example: _(hey)+_ matches hey and heyhey and any time of hey
+4. __x*__ means __x zero or ore times__  
+Example: _(hey)*_ it matches any string
 
 The last example can be a little confusing. The string "Good day" contains "hey" zero time, so it matches _(hey)*_
 The same thing with _(hey)?_
