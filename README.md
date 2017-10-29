@@ -12,13 +12,13 @@ You can also use spaces and newlines inside it, they will be ignored by extensio
 
 
 ### Examples
-(fb\\.com)|(pornhub)|(xvideos)
+(facebook\\.com)|(pornhub)|(xvideos)
 
 You can also write like this:
-(fb\\.com) | (pornhub) | (xvideos)
+(facebook\\.com) | (pornhub) | (xvideos)
 
 or like this:  
-(fb\\.com) |  
+(facebook\\.com) |  
 (pornhub) |  
 (xvideos) 
 
