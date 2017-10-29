@@ -12,32 +12,25 @@ You can also use spaces and newlines inside regex, they will be ignored by exten
 Your regex have to contain at least 5 characters.
 
 
-### Examples
-(facebook\\.com)|(pornhub)|(xvideos)
+### Examples and description
+If you want to block multiple sites, write each of them inside brackets and divide by vertical line from each other:
+**(facebook\\.com)|(pornhub)|(xvideos)**
 
-You can also write like this:
-(facebook\\.com) | (pornhub) | (xvideos)
+You can also write it like this:
+**(facebook\\.com) | (pornhub) | (xvideos)**
 
 or like this:  
-(facebook\\.com) |  
-(pornhub) |  
-(xvideos) 
+**(facebook\\.com) |**  
+**(pornhub) |**  
+**(xvideos)**   
 
-### Description
-As you saw, dot is backslashed. Without backslashing dot matches any character. This is how works regular expressions.  
+If you want to block only single site, just write its hostname without brackets:
+**facebook\\.com**
 
+You can write less strict regex: **facebook**
+But don't use this if domain name is too short, for example, don't use **vk**, use **vk\\.com** instead.
 
-**Vertical line** is alternation sign, it divides one hostname from another.  
-
-
-Each hostname should be placed inside brackets. **Brackets are used for grouping letters**. 
-It allows you use alternations for whole words not for just two letters.  
-
-
-That's all what you really need to know about regular expressions to use this extension.
-Just do like in example above, it's simple. 
-
-If you want to know more, read REGEX_intro.
+Note, that dot is backslashed, because it does have special meaning in regular expressions.
 
 ### Why should I use it?
 It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send you any notification/question before or after closing page. It just silent closes page and don't disturb you. It created for saving you time, not for wasting it.
