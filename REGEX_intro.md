@@ -47,7 +47,7 @@ Yes, dash is special sign, but only when it stays inside square bracets.
 
 ### Slash and backslash
 Omit http:// or https:// in your regex, because / is a special sign and has to be backslashed, like this __http(s)?:\\ / \\ /__   
-So, instead of __http(s)?:\\ / \\ /fb\\.com\ /__ write just __fb\.com__   
+So, instead of __http(s)?:\\ / \\ /fb\\.com\ /__ write just __fb\\.com__   
 It also has one advantage. The latter one will match any url with hostname, containig fb.com(for example m.fb.com). 
 But the first one matches only fb.com(because you are restricted conditions and nothing else can appear between https:// and fb.com) 
 So, don't use protocol names, only hostnames.
