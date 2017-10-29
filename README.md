@@ -9,6 +9,7 @@
 Now any active tab will be automatically closed if your regex matches its URL's **hostname**(extension works only with hostnames).  
 You can check your regex on the site https://regex101.com/  
 You can also use spaces and newlines inside it, they will be ignored by extension.  
+Your regex have to contain at least 5 characters.
 
 
 ### Examples
