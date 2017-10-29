@@ -22,11 +22,15 @@ or like this:
 (pornhub) |  
 (xvideos) 
 
+### Description
 As you saw, dot is backslashed. Without backslashing dot match any character. This is how works regular expressions.
-Just do like in examples above, it's simple.
+Vertical line is alternation sign, it divides one hostname from another.  
+Each hostname should be placed inside brackets. Brackets are used for grouping letters. 
+It allows you use alternations for whole words not for just two letters. 
+That's all what you really need to know about regular expressions to use this extension.
+Just do like in example above, it's simple. 
+
+If you want to know more, read REGEX_intro.
 
 ### Why should I use it?
 It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send you any notification/question before or after closing page. It just silent closes page and don't disturb you. It created for saving you time, not for wasting it.
-
-### TO DO
-* short introduction to regular expression

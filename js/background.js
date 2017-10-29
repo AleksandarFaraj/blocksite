@@ -1,6 +1,6 @@
 
-//function regExpEscape(stopItem) {
-//    return stopItem.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
+//function regExpEscape(string) {
+//    return string.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
 //}
 
 function removeWhiteSpace(pattern) {
@@ -8,7 +8,7 @@ function removeWhiteSpace(pattern) {
 }    
 
 function matchAndClose(pattern, url, tabId) {
-        if((pattern.length > 3)&&(/ /.test(pattern)) == false) {
+        if((pattern.length > 4)&&(/ /.test(pattern)) == false) {
             
             var re = new RegExp(pattern, 'gi');
             if( re.test(url) ) {
@@ -18,12 +18,11 @@ function matchAndClose(pattern, url, tabId) {
         }
 }
 
-
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 
     if(typeof(changeInfo.url) !== 'undefined') {
         chrome.storage.sync.get(null, function(items) {
-            changeInfo.url = changeInfo.url.match(/(http(s)?:\/\/)?.+?\//);
+            changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
 //            alert(changeInfo.url[0]);
             matchAndClose(removeWhiteSpace(items.pattern), changeInfo.url[0], tabId);
        });
