@@ -26,10 +26,10 @@ or like this:
 As you saw, dot is backslashed. Without backslashing dot matches any character. This is how works regular expressions.  
 
 
-Vertical line is alternation sign, it divides one hostname from another.  
+**Vertical line** is alternation sign, it divides one hostname from another.  
 
 
-Each hostname should be placed inside brackets. Brackets are used for grouping letters. 
+Each hostname should be placed inside brackets. **Brackets are used for grouping letters**. 
 It allows you use alternations for whole words not for just two letters.  
 
 
