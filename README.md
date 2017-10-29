@@ -27,7 +27,8 @@ or like this:
 If you want to block only single site, just write its hostname without brackets:
 **facebook\\.com**
 
-You can write less strict regex: **facebook**
+You can write less strict regex: **facebook**   
+
 But don't use this if domain name is too short, for example, don't use **vk**, use **vk\\.com** instead.
 
 Note, that dot is backslashed, because it does have special meaning in regular expressions.
