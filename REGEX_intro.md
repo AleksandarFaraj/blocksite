@@ -3,7 +3,7 @@
 You can write **letters** as they are. For example, you can just write _**pornub**_ to block pornhub.com
 
 ### Alternation and grouping
-If you want to set multiple hostnames, just write each of them inside braces and divide with vertical line.
+If you want to use multiple hostnames, just write each of them inside brackets and divide with vertical line.
 Example: __(pornhub)|(xvideos)__
 
 As you can see, brackets are used for grouping letters and vertical line is used for alternation. If you write pornhu**b**|**x**videos then alternation will work only for 2 letters(b and x), not for whole words.
@@ -37,9 +37,9 @@ The string "Good day" contains "hey" zero time, so both _(hey)*_ and _(hey)?_ wi
 
 
 ### Character class [ ]
-Character class is just set of characters. They are placed inside square braces. You can set up the range of characters, using dash sign.
+Character class is just set of characters. They are placed inside square brackets. You can set up the range of characters, using dash sign.
 1. __[a-z]{2}__ means two lowercase latin characters.
 2. __[a-zA-Z]{2,7}__ means __from 2 to 7 latin characters__. Case does not matter.
 3. __[a-zA-Z0-9]+__ means __at least one latin character or number__. It matches hektr911
 4. __[a-zA-Z0-9\-]+__ means __at least one latin character or number or dash sign__. It matches hektr-911
-Yes, dash is a special sign, but only when it stays inside square bracets.
+Yes, dash is a special sign, but only when it stays inside square brackets.
