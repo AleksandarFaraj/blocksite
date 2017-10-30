@@ -7,7 +7,7 @@
 4. click save button.  
 
 Now any active tab will be automatically closed if your regex matches tab's URL's **hostname**.  
-You can check your regex on the site https://regex101.com/  
+You can check your regex on the site [regex101][regex101]  
 You can also use spaces and newlines inside regex, they will be ignored by extension.  
 Your regex have to contain at least 5 characters.
 
@@ -37,6 +37,7 @@ Note, that dot is backslashed, because it does have special meaning in regular e
 It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send to you any notification/question before or after closing page. It just silent closes page and don't disturb you.
 
 ### INTRO TO REGEX
-You really don't need that intro and examples above is enough for most cases. But if you want to know a little more about regular expressions, you can read [REGEX_INTRO.md][regex_intro]
+You really don't need that intro. Examples above is enough for most cases. But if you want to know a little more about regular expressions, you can read [REGEX_INTRO.md][regex_intro]
 
+[regex101]: https://regex101.com/
 [regex_intro]: https://github.com/hektr/blocksite/blob/master/REGEX_INTRO.md
