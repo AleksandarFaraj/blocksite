@@ -48,15 +48,16 @@ You can also invert character class, using ^ sign inside it.
 -  __[^0-9]__ matches any single character that is __not__ digit.
 
 ### Backslash
-Backslash \ does have special meaning(it is used for "backslashing").  
-
-
-I've not told you about character classes, started with backslash.   
-For example, __\\d means "digit" and is equal to [0-9]__.  
+Backslash \ does have special meaning. It makes from "special" characters "normal" ones. But it can also does vice versa.
+I've not told you about character classes, started with backslash. For example, 
+1. __\\d__ means "digit" and is equal to [0-9].  
+2. __\\D__ is equal to [^0-9]
+3. __\\s__ matches any "whitespace" symbol(space, newline, tabulation, etc)
+and so on...
 
 So, you have to be carefull with backslash, it sometimes changes meaning of the next letter.  
-If you use backslash and don't want it suddenly backslash something, then backslash your backslash.  
-For example, __\\\d is just backlash and d letter__, not character class.
+If you use backslash and don't want it suddenly backslash something, then backslash your backslash:  
+4. __\\\d__ is just backlash and d letter, not character class.
 
 
 ### Slash
