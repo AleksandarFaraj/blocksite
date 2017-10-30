@@ -1,18 +1,19 @@
 ## Short intro to regex writing
+
 ### Letters
 You can write **letters** as they are. For example, you can just write _**pornub**_ to block pornhub.com
 
-### Alternation and grouping
+### Choice and grouping
 If you want to use multiple hostnames, just write each of them inside brackets and divide with vertical line.
 Example: __(pornhub)|(xvideos)__
 
-As you can see, brackets are used for grouping letters and vertical line is used for alternation. If you write pornhu**b**|**x**videos then alternation will work only for 2 letters(b and x), not for whole words.
+As you can see, brackets are used for grouping letters and vertical line means OR. If you write pornhu**b**|**x**videos then vertical line will work only for 2 letters(b and x), not for whole words.
 
-Bracket captures value inside it. It's ok, everything will work, you can use it. But capturing is not necessary in this extention. If you want to create group without capturing, you can use this construction __(?:pornhub)|(?:xvideos)__. 
+Brackets capture value inside it. It's ok, everything will work, you can use it. But capturing is not necessary in this extention. If you want to create groups without capturing, you can use this construction __(?:pornhub)|(?:xvideos)__. 
 
 ### Special characters . ? + * | ( ) [ ] { } ^ $ / \ 
 As you saw before, there are characters that do have special meaning. ( ) and | are the examples.
-The first one is used for grouping and the second one is for alternation. If you want use brackets just as brackets, you have to backslash it.  
+If you want use brackets just as brackets, you have to backslash it.  
 This is true also for any other characher with special meaning. 
 
 __If you don't need special meaning of character, you have to backslash it__.
@@ -20,7 +21,9 @@ __If you don't need special meaning of character, you have to backslash it__.
 Here is the list of characters with special meaning: . ? + * | ( ) [ ] { } ^ $ / \  
 
 ### Dot
-**Dot-sign** means "any character except of new line". So, it matches almost any character. If you want dot match only dot, you have to backslash it. Example: __facebook\\.com__
+**Dot-sign** means "any character except of new line".   
+
+If you want dot match only dot, you have to backslash it. Example: __facebook\\.com__
 
 ### Quatifiers { } ? + * 
 1. __x{min,max}__ means __x from min times to max times__  
@@ -63,3 +66,8 @@ If you use backslash and don't want it suddenly backslash something, then backsl
 Slash does also have special meaning. It used as regex delimiter: /regex/. Anytime you use it inside regex, backslash it.  
 
 __Note, that you should not use slash as delimiter at blocksite extension. Blocksite knows, where regex starts and ends.__
+
+### Practise
+Now you can go to [regex101][regex101] and check your regex writing skills.
+
+[regex101]: https://regex101.com/
