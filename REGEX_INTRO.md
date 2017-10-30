@@ -47,18 +47,19 @@ Yes, dash is a special sign, but only when it stays inside square brackets.
 You can also invert character class, using ^ sign inside it.
 -  __[^0-9]__ matches any single character that is __not__ digit.
 
-### Slash and Backslash
+### Backslash
 Backslash \ does have special meaning(it is used for "backslashing").  
 
 
-I've not told you about character classes, started with backslash. 
+I've not told you about character classes, started with backslash.   
 For example, __\\d means "digit" and is equal to [0-9]__.  
 
-So, you have to be carefull with backslash, it sometimes changes meaning of the next letter.
-If you use backslash and don't want it suddenly backslash something, then backslash your backslash.
+So, you have to be carefull with backslash, it sometimes changes meaning of the next letter.  
+If you use backslash and don't want it suddenly backslash something, then backslash your backslash.  
 For example, __\\\d is just backlash and d letter__, not character class.
 
 
+### Slash
 Slash does also have special meaning. It used as regex delimiter: /regex/. Anytime you use it inside regex, backslash it.  
 
 __Note, that you should not use slash as delimiter at blocksite extension. Blocksite knows, where regex starts and ends.__
