@@ -1,13 +1,13 @@
 
 function preparePattern(pattern) {
     
-    //Remove WhiteSpace and newlines. Remove trailing Vertical Line
-     return pattern.replace(/\s/g, '').replace(/\|$/m, '');
+    //Remove WhiteSpace and newlines. Remove trailing Vertical Line(s)
+     return pattern.replace(/\s/g, '').replace(/\|+$/m, '');
     
 }
     
 function matchAndClose(pattern, url, tabId) {
-    if((pattern.length > 4)&&(/ /.test(pattern)) == false) {
+    if(pattern.length > 4) {
 
         var re = new RegExp(pattern, 'i');
         if( re.test(url) ) {
