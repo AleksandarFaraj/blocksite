@@ -34,4 +34,4 @@ But don't use this if domain name is too short, for example, don't use **vk**, u
 Note, that dot is backslashed, because it does have special meaning in regular expressions.
 
 ### Why should I use it?
-It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send you any notification/question before or after closing page. It just silent closes page and don't disturb you. It created for saving you time, not for wasting it.
+It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send to you any notification/question before or after closing page. It just silent closes page and don't disturb you.
