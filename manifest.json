@@ -2,8 +2,11 @@
   "manifest_version": 2,
 
   "name": "Blocksite",
+  "short_name": "Blocksite",
   "description": "Block sites using regular expression",
-  "version": "0.1",
+  "version": "0.1.1",
+  "homepage_url": "https://github.com/hektr/blocksite",
+  "author": "hektr",
   "icons": { "16": "images/icon16.png",
              "32": "images/icon32.png",
              "48": "images/icon48.png",

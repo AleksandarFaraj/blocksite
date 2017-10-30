@@ -2,7 +2,7 @@
 
 function save_options() {
     
-    var user_pattern = document.getElementById('user_pattern').value;
+    var user_pattern = document.getElementById('user_pattern');
     
     chrome.storage.sync.set({ pattern:  user_pattern }, function() {
         

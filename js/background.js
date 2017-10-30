@@ -1,9 +1,11 @@
 
-function removeWhiteSpace(pattern) {
+function preparePattern(pattern) {
     
-    return pattern.replace(/\s/g, '');
+    //Remove WhiteSpace and newlines. Remove trailing Vertical Line
+     return pattern.replace(/\s/g, '').replace(/\|$/m, '');
+    
 }
-
+    
 function matchAndClose(pattern, url, tabId) {
     if((pattern.length > 4)&&(/ /.test(pattern)) == false) {
 
@@ -23,7 +25,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
             if(typeof(items.pattern) !== 'undefined') {
                 
                 changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
-                matchAndClose(removeWhiteSpace(items.pattern), changeInfo.url[0], tabId);
+                matchAndClose(preparePattern(items.pattern), changeInfo.url[0], tabId);
             }
        });
     }
