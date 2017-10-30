@@ -17,11 +17,12 @@ function save_options() {
 
 
 function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
-  chrome.storage.sync.get(null, function(items) {
-    document.getElementById('user_pattern').value = items.pattern;
+    chrome.storage.sync.get(null, function(items) {
+        if(typeof(items.pattern) !== 'undefined') {
+          document.getElementById('user_pattern').value = items.pattern;
+      }
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);

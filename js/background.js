@@ -22,9 +22,11 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 
     if(typeof(changeInfo.url) !== 'undefined') {
         chrome.storage.sync.get(null, function(items) {
-            changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
-//            alert(changeInfo.url[0]);
-            matchAndClose(removeWhiteSpace(items.pattern), changeInfo.url[0], tabId);
+            if(typeof(items.pattern) !== 'undefined') {
+                changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
+//              alert(changeInfo.url[0]);
+                matchAndClose(removeWhiteSpace(items.pattern), changeInfo.url[0], tabId);
+            }
        });
     }
 });
