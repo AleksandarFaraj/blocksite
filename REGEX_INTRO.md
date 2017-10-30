@@ -13,8 +13,7 @@ Brackets capture value inside it. It's ok, everything will work, you can use it.
 
 ### Special characters . ? + * | ( ) [ ] { } ^ $ / \ 
 As you saw before, there are characters that do have special meaning. ( ) and | are the examples.
-If you want use brackets just as brackets, you have to backslash it.  
-This is true also for any other characher with special meaning. 
+If you want use brackets just as brackets, you have to backslash it. This is true also for any other characher with special meaning. 
 
 __If you don't need special meaning of character, you have to backslash it__.
 

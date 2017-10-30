@@ -37,4 +37,6 @@ Note, that dot is backslashed, because it does have special meaning in regular e
 It can be useful, if you spend too much time at social network(fb, youtube, etc). Blocksite doesn't send to you any notification/question before or after closing page. It just silent closes page and don't disturb you.
 
 ### INTRO TO REGEX
-You really don't need that intro and examples above is enough for most cases. But if you want to know a little more about regular expressions, you can read REGEX_INTRO.md
+You really don't need that intro and examples above is enough for most cases. But if you want to know a little more about regular expressions, you can read [REGEX_INTRO.md][regex_intro]
+
+[regex_intro]: https://github.com/hektr/blocksite/blob/master/REGEX_INTRO.md
