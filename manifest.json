@@ -3,8 +3,8 @@
 
   "name": "Blocksite",
   "short_name": "Blocksite",
-  "description": "Block sites using regular expression",
-  "version": "0.1.1",
+  "description": "Light and easy way to block sites",
+  "version": "0.1.2",
   "homepage_url": "https://github.com/hektr/blocksite",
   "author": "hektr",
   "icons": { "16": "images/icon16.png",

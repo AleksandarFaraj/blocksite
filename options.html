@@ -15,15 +15,25 @@ body { line-height: 0.5em; }
 
 </head>
 <body>
-    <p>Enter your regex below:</p>
+    <p>Enter your hostnames below:</p>
 
-<div id = "container">
-<textarea id = user_pattern rows = 7 placeholder = "Example: (facebook\.com) | (pornhub) | (xvideos)">
-</textarea><br/>
+
+<textarea id = "uInput"  rows = "12" cols = "22" placeholder = "*Example: 
+facebook
+pinterest.com
+youtube.com
+
+*You can also divide your hostnames by space(s):
+facebook.com    youtube    pinterest
+
+OPTIONAL:
+*You can also write regular expression in field below. Your regex will be used in addition to hostnames list." autofocus></textarea><br/>
 
 <div id="status"></div><br/>
-<button id="save" class="left">Save</button>
-</div>
+<button id="save">Save</button>
+
+<button id = "regexBtn" style = "float:right">enableRegex</button> <br/><br/><br/>
+<input type = "text" id = "regexField" disabled></input>
 
 <script src="js/options.js"></script>
 

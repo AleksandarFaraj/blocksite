@@ -1,20 +1,11 @@
-
-function preparePattern(pattern) {
-    
-    //Remove WhiteSpace and newlines. Remove trailing Vertical Line(s)
-     return pattern.replace(/\s/g, '').replace(/\|+$/m, '');
-    
-}
     
 function matchAndClose(pattern, url, tabId) {
-    if(pattern.length > 4) {
 
         var re = new RegExp(pattern, 'i');
         if( re.test(url) ) {
             chrome.tabs.remove(tabId);
         }
-    }
-}
+};
 
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 
@@ -25,8 +16,16 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
             if(typeof(items.pattern) !== 'undefined') {
                 
                 changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
-                matchAndClose(preparePattern(items.pattern), changeInfo.url[0], tabId);
+                matchAndClose(items.pattern, changeInfo.url[0], tabId);
             }
        });
     }
 });
+
+/* Code for getting correct regex from list of items: 
+ 
+ Better way to do this:
+ var result = line.replace(/[^a-zA-Z0-9.:\/\s\-]/g, '').replace(/\n/g, ' ').replace(/ +/g, ' ').replace(/ +$/gm, '').replace(/^ +/gm, '').replace(/^/gm, '(').replace(/$/gm, ')').replace(/ +/gm, ')|(').replace(/[.\/]/g, '\\$&');
+
+// Code for 
+*/
