@@ -9,5 +9,6 @@
 ### Example
 ![Example 1](/scr/firstWay.png)  
 
-You can also use space as divider.
+You can also use space as divider.  
+
 ![Example 2](/scr/secondWay.png)
