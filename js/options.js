@@ -8,58 +8,33 @@ function showStatusMessage(message, color) {
             status.textContent = '';
         }, 750);
     }
-    
-function switchRegex() {
-    
-    if(document.getElementById('regexField').disabled == true) {
-        
-        document.getElementById('regexField').disabled = false;
-        document.getElementById('regexBtn').innerText = "disableRegex";
-        showStatusMessage("Regex is ENABLED", "green");
-        
-    } else {
-        document.getElementById('regexField').disabled = true;
-        document.getElementById('regexBtn').innerText = "enableRegex";
-        showStatusMessage("Regex is DISABLED", "green");
-    }
-};
 
-function checkingChain() {
+function validate() {
     
     var uInput = document.getElementById('uInput').value;
-    var regex = document.getElementById('regexField').value;
 
     if(typeof(uInput !== 'undefined')) {
-//        showStatusMessage("Not undefined", "red");
         
-        if(/^[a-zA-Z0-9.:\/\s\-_]+$/gm.test(uInput)) {
-//            showStatusMessage("Correct input", "red");
-            var regexDisabled = document.getElementById('regexField').disabled;
+        if(/[^a-zA-Z0-9.:\/\s\-_]/g.test(uInput)) {
             
-            if(regexDisabled === false) {
-                
-                var regex = document.getElementById('regexField').value;
-                
-                var re = new RegExp(regex, 'i');
-                
-                if(re.test("o")) {
-                    
-                    showStatusMessage("Can't be saved, make your regex more STRICT", "red");
-                    
-                } else {
-//                    showStatusMessage("First else", "red");
-                    save_options(concatenate(convertTxtToRegex(uInput), regex), uInput, false, regex);
-                }
-            } else {
-//                showStatusMessage("Second else", "red");
-                save_options(convertTxtToRegex(uInput), uInput, true, regex);
-            }
+            showStatusMessage('Incorrect input', 'red');
+            
         } else {
-            showStatusMessage(uInput, "red");
+            
+             var regex = convertTxtToRegex(uInput);
+             
+             if(/^\(\)$/gm.test(regex)) {
+                 
+                 regex = null;
+                 uInput = null;
+                 
+             }
+                
+                save_options(regex, uInput);
         }
+        
     }
 };
-
 
 function convertTxtToRegex(uInput) {
     
@@ -67,18 +42,11 @@ function convertTxtToRegex(uInput) {
     
 };
 
-function concatenate(uInput, regex) {
-    return uInput.concat('|(').concat(regex.replace(/ +/g, '')).concat(')');
-};
-
-
-function save_options(uInput, txt, regexFlag, regex ) {
+function save_options(pattern, txt ) {
     
     chrome.storage.sync.set({ 
-        pattern:  uInput,
-        txt: txt,
-        extraRegex: regex,
-        regexFlag: regexFlag
+        pattern:  pattern,
+        txt: txt
     }, showStatusMessage("Options saved","green")
         
     );
@@ -92,19 +60,10 @@ function restore_options() {
         if(typeof(items.pattern) !== 'undefined') {
             
                 document.getElementById('uInput').value = items.txt;
-                document.getElementById('regexField').value = items.extraRegex;
-                
-                if (!items.regexFlag) {
-                    document.getElementById('regexField').disabled = items.regexFlag;
-                    document.getElementById('regexBtn').innerText = "disableRegex";
-                } else {
-                    document.getElementById('regexField').disabled = items.regexFlag;
-                    document.getElementById('regexBtn').innerText = "enableRegex";
-                }
+
             }
       });
 };
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', checkingChain);
-document.getElementById('regexBtn').addEventListener('click', switchRegex);
+document.getElementById('save').addEventListener('click', validate);
