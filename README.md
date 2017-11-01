@@ -7,6 +7,6 @@
 4. click save button.  
 
 ### Example
-[Example 1](/scr/firstWay.png)
+![Example 1](/scr/firstWay.png)
 
-[Example 2](/scr/secondWay.png)
+![Example 2](/scr/secondWay.png)
