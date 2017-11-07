@@ -15,7 +15,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
         
         chrome.storage.sync.get(null, function(items) {
 
-            if( (typeof(items.pattern) !== 'undefined') && (items.pattern !== null) ) {
+            if( (typeof(items.pattern) !== 'undefined') && (items.pattern !== null) && (items.disable == false) ) {
 //                alert(items.pattern);
                 changeInfo.url = changeInfo.url.match(/(?:http(s)?:\/\/)?.+?\//);
                 matchAndClose(items.pattern, changeInfo.url[0], tabId);
