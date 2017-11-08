@@ -1,0 +1,48 @@
+{
+  "name": {
+    "message": "Blocksite"
+    },
+  
+  "description": {
+    "message": "Простой способ заблокировать сайты"
+    },
+
+  "title": {
+    "message": "Введите адреса сайтов в текстовое поле"
+    },
+    
+  "examples": {
+    "message": "facebook
+pinterest.com 
+youtube.com 
+
+Можно также использовать для разделения адресов пробел 
+facebook youtube pinterest" 
+    },
+  
+  "saved": {
+    "message": "опции сохранены"
+    },
+    
+  "saveBtnTxt": {
+    "message": "Сохранить"
+    },
+  
+  "err_short_hostname": {
+    "message": "слишком короткий адрес"
+    },
+  
+  "err_incorrect_input": {
+    "message": "недопустимые символы"
+    },
+  
+  "btn_enable": {
+    "message": "Вкл"
+    },
+    
+  "btn_disable": {
+    "message": "Откл"
+  }
+  
+}
+ 

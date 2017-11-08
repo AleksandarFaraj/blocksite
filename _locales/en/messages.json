@@ -1,0 +1,47 @@
+{
+  "name": {
+    "message": "Blocksite"
+    },
+  
+  "description": {
+    "message": "Light and easy way to block sites"
+    },
+
+  "title": {
+    "message": "Enter hostname(s) below"
+    },
+    
+  "examples": {
+    "message": "facebook
+pinterest.com 
+youtube.com 
+
+You can also use space for dividing hostnames 
+facebook youtube pinterest" 
+    },
+  
+  "saved": {
+    "message": "options saved"
+    },
+    
+  "saveBtnTxt": {
+    "message": "Save"
+    },
+  
+  "err_short_hostname": {
+    "message": "too short hostname"
+    },
+  
+  "err_incorrect_input": {
+    "message": "incorrect input"
+    },
+  
+  "btn_enable": {
+    "message": "Enable"
+    },
+    
+  "btn_disable": {
+    "message": "Disable"
+  }
+  
+}

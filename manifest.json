@@ -1,16 +1,18 @@
 {
   "manifest_version": 2,
 
-  "name": "Blocksite",
-  "short_name": "Blocksite",
-  "description": "Light and easy way to block sites",
-  "version": "0.1.4",
+  "name": "__MSG_name__",
+  "short_name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "0.1.5",
   "homepage_url": "https://github.com/hektr/blocksite",
   "author": "hektr",
   "icons": { "16": "images/icon16.png",
              "32": "images/icon32.png",
              "48": "images/icon48.png",
              "128": "images/icon128.png" },
+             
+  "default_locale": "en",
              
   "options_ui": {
       "page": "options.html",

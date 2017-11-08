@@ -1,3 +1,14 @@
+//localization
+saved_msg = chrome.i18n.getMessage("saved");
+err_short_hostname_msg = chrome.i18n.getMessage("err_short_hostname");
+err_incorrect_input_msg = chrome.i18n.getMessage("err_incorrect_input");
+btn_enable_lbl = chrome.i18n.getMessage("btn_enable");
+btn_disable_lbl = chrome.i18n.getMessage("btn_disable");
+document.getElementById("disableBtn").innerText =  chrome.i18n.getMessage("btn_disable");
+document.getElementById("save").innerText = chrome.i18n.getMessage("saveBtnTxt");
+document.getElementById("title").innerHTML = chrome.i18n.getMessage("title");
+document.getElementById("uInput").placeholder = chrome.i18n.getMessage("examples");
+
 // google analytics
 var _AnalyticsCode = 'UA-109303461-1';
 
@@ -17,7 +28,7 @@ function trackButtonClick(e) {
   _gaq.push(['_trackEvent', e.target.id, 'clicked']);
 }
 
-
+//context message
 function showStatusMessage(message, color) {
         
         // Update status to let user know options were saved.
@@ -36,16 +47,16 @@ function convertTxtToRegex(uInput) {
 };
 
 function convertInnerTextToBoolean(label) {
-    if(label == "Disable") { 
+    if(label == btn_disable_lbl) { 
         document.getElementById('save').disabled = true;
         document.getElementById('uInput').disabled = true;
-        document.getElementById('disableBtn').innerText = "Enable";
+        document.getElementById('disableBtn').innerText = btn_enable_lbl;
         return true;
         
     } else {
         document.getElementById('save').disabled = false;
         document.getElementById('uInput').disabled = false;
-        document.getElementById('disableBtn').innerText = "Disable";
+        document.getElementById('disableBtn').innerText = btn_disable_lbl;
         return false;
         
     }
@@ -60,11 +71,11 @@ function validate(disableStatus) {
         
         if(/[^a-zA-Z0-9.:\/\s\-_]/g.test(uInput)) {
             
-            showStatusMessage('Incorrect input', 'red');
+            showStatusMessage(err_incorrect_input_msg, 'red');
             
         } else if (/\(.{1,3}\)\|?/g.test(regex)) {
                  
-                 showStatusMessage("Too short hostname", "red");
+                 showStatusMessage(err_short_hostname_msg, "red");
             
         } else {
             
@@ -86,7 +97,7 @@ function save_options(pattern, txt, disableStatus ) {
         pattern:  pattern,
         txt: txt,
         disable: disableStatus
-    }, showStatusMessage("Options saved","green")
+    }, showStatusMessage(saved_msg,"green")
         
     );
 };
@@ -102,11 +113,11 @@ function restore_options() {
                 
                 if(items.disable == true) {
                     
-                    convertInnerTextToBoolean("Disable");     
+                    convertInnerTextToBoolean(btn_disable_lbl);     
                     
                 } else {
                     
-                    convertInnerTextToBoolean("Enable");
+                    convertInnerTextToBoolean(btn_enable_lbl);
                     
                 }
 
