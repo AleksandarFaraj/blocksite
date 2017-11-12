@@ -12,12 +12,7 @@
     },
     
   "examples": {
-    "message": "facebook
-pinterest.com 
-youtube.com 
-
-You can also use space for dividing hostnames 
-facebook youtube pinterest" 
+    "message": "facebook\npinterest.com\nyoutube.com\n\nYou can also use space for dividing hostnames\nfacebook youtube pinterest" 
     },
   
   "saved": {

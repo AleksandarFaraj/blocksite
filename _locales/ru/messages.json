@@ -12,12 +12,7 @@
     },
     
   "examples": {
-    "message": "facebook
-pinterest.com 
-youtube.com 
-
-Можно также использовать для разделения адресов пробел 
-facebook youtube pinterest" 
+    "message": "facebook\npinterest.com\nyoutube.com\n\nМожно также использовать для разделения адресов пробел\nfacebook youtube pinterest" 
     },
   
   "saved": {
