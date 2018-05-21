@@ -12,19 +12,30 @@
             padding: 0;
         }
 
-        .kitten {
+        #kitten {
             width: 100vw;
             height: 100vh;
             display: block;
         }
 
-        h1 {
-            position:fixed;
+        #title {
+            position: fixed;
+            display: block;
+            padding: 0;
+            padding-left: 10vw;
+            padding-top: 10vh;
+            margin: 0;
+            top: 0;
+            font-family: Verdana;
+            color: aliceblue;
+            font-size: 5vw;
+
         }
     </style>
 </head>
 
 <body>
+    <h1 id="title">Hello friend! Please resists! Cats!</h1>
     <img id="kitten">
     <script>
         function getScreenSize() {
@@ -48,18 +59,9 @@
         function setBackground() {
             setImage(getScreenSize());
         }
-        function refreshBackgroundFactory() {
-            return function refreshBackground() {
-                var throttle = null;
-                if (!throttle) {
-                    setBackground();
-                    throttle = setTimeout(function () { throttle = null; refreshBackground() }, 500);
-                }
-            };
-        }
-        var refreshBackground = refreshBackgroundFactory();
-        window.addEventListener("resize", refreshBackground);
-        refreshBackground();
+
+        window.addEventListener("resize", setBackground);
+        setBackground();
 
 
     </script>
