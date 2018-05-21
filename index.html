@@ -21,24 +21,43 @@
 </head>
 
 <body>
-    <div id="content"></div>
+    <img id="kitten">
     <script>
         function getScreenSize() {
+            var width = window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+
+            var height = window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;
             return {
-                height: window.screen.height * window.devicePixelRatio,
-                width: window.screen.width * window.devicePixelRatio
+                width, height
             }
         }
         function image(size) {
-            var img = document.createElement("IMG");
-            img.classList.add("kitten");
+            var img = document.getElementById("kitten");
             img.src = "https://placekitten.com/" + size.width + "/" + size.height;
             return img;
         }
-        function generateBackground(){
-            document.getElementById("content").appendChild(image(getScreenSize()));
+
+        function setBackground() {
+            setImage(getScreenSize());
         }
-        generateBackground();
+        function refreshBackgroundFactory() {
+            return function refreshBackground() {
+                var throttle = null;
+                if (!throttle) {
+                    setBackground();
+                    throttle = setTimeout(function () { throttle = null; refreshBackground() }, 500);
+                }
+            };
+        }
+        var refreshBackground = refreshBackgroundFactory();
+        window.addEventListener("resize", refreshBackground);
+        refreshBackground();
+
+
     </script>
 </body>
 
