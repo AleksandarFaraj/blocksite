@@ -1,1 +1,45 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Hello!
+    </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .kitten {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script>
+        function getScreenSize() {
+            return {
+                height: window.screen.height * window.devicePixelRatio,
+                width: window.screen.width * window.devicePixelRatio
+            }
+        }
+        function image(size) {
+            var img = document.createElement("IMG");
+            img.classList.add("kitten");
+            img.src = "https://placekitten.com/" + size.width + "/" + size.height;
+            return img;
+        }
+        function generateBackground(){
+            document.getElementById("content").appendChild(image(getScreenSize()));
+        }
+        generateBackground();
+    </script>
+</body>
+
+</html>
