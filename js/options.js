@@ -9,28 +9,9 @@ document.getElementById("save").innerText = chrome.i18n.getMessage("saveBtnTxt")
 document.getElementById("title").innerHTML = chrome.i18n.getMessage("title");
 document.getElementById("uInput").placeholder = chrome.i18n.getMessage("examples");
 
-// google analytics
-var _AnalyticsCode = 'UA-109303461-1';
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', _AnalyticsCode]);
-_gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script');
-  ga.type = 'text/javascript';
-  ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(ga, s);
-})();
-
-function trackButtonClick(e) {
-  _gaq.push(['_trackEvent', e.target.id, 'clicked']);
-}
 
 //context message
 function showStatusMessage(message, color) {
-        
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
         status.style.color = color;
@@ -128,11 +109,7 @@ function restore_options() {
 document.addEventListener('DOMContentLoaded', restore_options);
 
 document.getElementById('save').addEventListener('click', validate);
-document.getElementById('save').addEventListener('click', trackButtonClick);
-
 
 document.getElementById('disableBtn').addEventListener('click', function() {
     validate(document.getElementById('disableBtn').innerText);
 });
-
-document.getElementById('disableBtn').addEventListener('click', trackButtonClick);
